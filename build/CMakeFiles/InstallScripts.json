@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/KevinLi/tiny_plugin_runtime/build/cmake_install.cmake",
+		"/home/KevinLi/tiny_plugin_runtime/build/src/cmake_install.cmake",
+		"/home/KevinLi/tiny_plugin_runtime/build/plugins/cmake_install.cmake",
+		"/home/KevinLi/tiny_plugin_runtime/build/tests/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

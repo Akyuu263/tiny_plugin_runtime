@@ -1,0 +1,1 @@
+/usr/bin/c++ -g -Wl,--dependency-file=CMakeFiles/error_test.dir/link.d CMakeFiles/error_test.dir/error_test.cpp.o -o error_test  ../src/libtpr.a -ldl

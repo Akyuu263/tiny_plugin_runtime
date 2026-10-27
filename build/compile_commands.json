@@ -1,0 +1,38 @@
+[
+{
+  "directory": "/home/KevinLi/tiny_plugin_runtime/build/src",
+  "command": "/usr/bin/c++  -I/home/KevinLi/tiny_plugin_runtime/include -g -std=c++23 -fPIC -o CMakeFiles/tpr.dir/loaded_plugin.cpp.o -c /home/KevinLi/tiny_plugin_runtime/src/loaded_plugin.cpp",
+  "file": "/home/KevinLi/tiny_plugin_runtime/src/loaded_plugin.cpp",
+  "output": "src/CMakeFiles/tpr.dir/loaded_plugin.cpp.o"
+},
+{
+  "directory": "/home/KevinLi/tiny_plugin_runtime/build/src",
+  "command": "/usr/bin/c++  -I/home/KevinLi/tiny_plugin_runtime/include -g -std=c++23 -fPIC -o CMakeFiles/tpr.dir/plugin_instance.cpp.o -c /home/KevinLi/tiny_plugin_runtime/src/plugin_instance.cpp",
+  "file": "/home/KevinLi/tiny_plugin_runtime/src/plugin_instance.cpp",
+  "output": "src/CMakeFiles/tpr.dir/plugin_instance.cpp.o"
+},
+{
+  "directory": "/home/KevinLi/tiny_plugin_runtime/build/src",
+  "command": "/usr/bin/c++  -I/home/KevinLi/tiny_plugin_runtime/include -g -std=c++23 -fPIC -o CMakeFiles/tpr.dir/plugin_registry.cpp.o -c /home/KevinLi/tiny_plugin_runtime/src/plugin_registry.cpp",
+  "file": "/home/KevinLi/tiny_plugin_runtime/src/plugin_registry.cpp",
+  "output": "src/CMakeFiles/tpr.dir/plugin_registry.cpp.o"
+},
+{
+  "directory": "/home/KevinLi/tiny_plugin_runtime/build/plugins",
+  "command": "/usr/bin/c++ -Dplugin_EXPORTS -I/home/KevinLi/tiny_plugin_runtime/include -g -std=c++23 -fPIC -o CMakeFiles/plugin.dir/plugin.cpp.o -c /home/KevinLi/tiny_plugin_runtime/plugins/plugin.cpp",
+  "file": "/home/KevinLi/tiny_plugin_runtime/plugins/plugin.cpp",
+  "output": "plugins/CMakeFiles/plugin.dir/plugin.cpp.o"
+},
+{
+  "directory": "/home/KevinLi/tiny_plugin_runtime/build/plugins",
+  "command": "/usr/bin/c++ -Dfailing_plugin_EXPORTS -I/home/KevinLi/tiny_plugin_runtime/include -g -std=c++23 -fPIC -o CMakeFiles/failing_plugin.dir/failing_plugin.cpp.o -c /home/KevinLi/tiny_plugin_runtime/plugins/failing_plugin.cpp",
+  "file": "/home/KevinLi/tiny_plugin_runtime/plugins/failing_plugin.cpp",
+  "output": "plugins/CMakeFiles/failing_plugin.dir/failing_plugin.cpp.o"
+},
+{
+  "directory": "/home/KevinLi/tiny_plugin_runtime/build/tests",
+  "command": "/usr/bin/c++  -I/home/KevinLi/tiny_plugin_runtime/include -g -std=c++23 -o CMakeFiles/error_test.dir/error_test.cpp.o -c /home/KevinLi/tiny_plugin_runtime/tests/error_test.cpp",
+  "file": "/home/KevinLi/tiny_plugin_runtime/tests/error_test.cpp",
+  "output": "tests/CMakeFiles/error_test.dir/error_test.cpp.o"
+}
+]
