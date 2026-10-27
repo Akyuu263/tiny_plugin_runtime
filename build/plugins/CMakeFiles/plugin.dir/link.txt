@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -g -shared -Wl,--dependency-file=CMakeFiles/plugin.dir/link.d  -o libplugin.so CMakeFiles/plugin.dir/plugin.cpp.o

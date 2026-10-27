@@ -1,2 +1,0 @@
-/usr/bin/ar qc libtpr.a CMakeFiles/tpr.dir/loaded_plugin.cpp.o CMakeFiles/tpr.dir/plugin_instance.cpp.o CMakeFiles/tpr.dir/plugin_registry.cpp.o
-/usr/bin/ranlib libtpr.a

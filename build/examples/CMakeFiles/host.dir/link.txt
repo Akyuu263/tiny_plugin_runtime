@@ -1,1 +1,0 @@
-/usr/bin/c++ -g -Wl,--dependency-file=CMakeFiles/host.dir/link.d CMakeFiles/host.dir/host.cpp.o -o host  ../src/libtpr.a -ldl
