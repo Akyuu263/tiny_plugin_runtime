@@ -1,6 +1,5 @@
 #ifndef PLUGIN_API_H
 #define PLUGIN_API_H
-#endif
 
 #include <stdint.h>
 
@@ -36,4 +35,6 @@ PluginApi const* get_api_v1(void);
 
 #ifdef __cplusplus
 }
+#endif
+
 #endif
