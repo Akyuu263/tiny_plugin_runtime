@@ -51,7 +51,8 @@ static const PluginApi api = {
 
 }
 
-extern "C" const PluginApi* get_api_v1(void) {
+
+extern "C" PluginApi const* get_api_v1(void) {
     return &api;
 }
 

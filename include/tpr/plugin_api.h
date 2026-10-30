@@ -33,6 +33,8 @@ typedef struct PluginApi {
 
 PluginApi const* get_api_v1(void);
 
+typedef PluginApi const* (* PluginApiFn)(void);
+
 #ifdef __cplusplus
 }
 #endif
