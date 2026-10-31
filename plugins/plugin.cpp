@@ -49,7 +49,7 @@ static const PluginApi api = {
     .transform = transform
 };
 
-}
+} // namespace
 
 
 extern "C" PluginApi const* get_api_v1(void) {
