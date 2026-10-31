@@ -4,6 +4,7 @@
 #include "tpr/plugin_api.h"
 #include <dlfcn.h>
 #include <filesystem>
+#include <memory>
 
 namespace tpr {
 class LoadedPlugin {
@@ -13,13 +14,17 @@ public:
     LoadedPlugin(LoadedPlugin const&) = delete;
     LoadedPlugin& operator=(LoadedPlugin const&) = delete;
 
+    LoadedPlugin(LoadedPlugin&&) = default;
+    LoadedPlugin& operator=(LoadedPlugin&&) = default;
+
 private:
     using LibHandle = std::unique_ptr<void, decltype(&dlclose)>;
 
     using GetApiFn = PluginApi const* (*)(void);
 
-    LibHandle handle{nullptr, &dlclose};
+    LibHandle m_handle;
+    PluginApi const* m_api;
 
-    LoadedPlugin(LibHandle handle, PluginApi const* api);
+    LoadedPlugin(LibHandle&& handle, PluginApi const* api);
 };
 }

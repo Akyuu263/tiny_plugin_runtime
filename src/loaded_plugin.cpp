@@ -3,11 +3,11 @@
 #include "tpr/plugin_api.h"
 #include <dlfcn.h>
 #include <string>
+#include <utility>
 
 namespace tpr {
-LoadedPlugin::LoadedPlugin(LibHandle handle, PluginApi const* api) {
-
-}
+LoadedPlugin::LoadedPlugin(LibHandle&& handle, PluginApi const* api) :
+    m_handle(std::move(handle)), m_api(api) {}
 
 Result<LoadedPlugin> LoadedPlugin::load(std::filesystem::path const& path) {
     void* raw_open = dlopen(path.c_str(), RTLD_NOW | RTLD_LOCAL);
@@ -21,9 +21,9 @@ Result<LoadedPlugin> LoadedPlugin::load(std::filesystem::path const& path) {
 
     dlerror();
 
-    LibHandle handle_{raw_open, &dlclose};
+    LibHandle handle{raw_open, &dlclose};
 
-    void* raw_sym = dlsym(handle_.get(), "get_api_v1");
+    void* raw_sym = dlsym(handle.get(), "get_api_v1");
     if (char const* error = dlerror()) {
         return std::unexpected(PluginError(
             ErrorCode::EntryPointMissing,
@@ -97,5 +97,6 @@ Result<LoadedPlugin> LoadedPlugin::load(std::filesystem::path const& path) {
         ));
     }
 
+    return LoadedPlugin(std::move(handle), api);
 }
 }
