@@ -24,6 +24,7 @@ private:
 
     LibHandle m_handle;
     PluginApi const* m_api;
+    std::string m_name{m_api->name};
 
     LoadedPlugin(LibHandle&& handle, PluginApi const* api);
 };
