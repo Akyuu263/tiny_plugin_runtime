@@ -14,8 +14,8 @@ public:
     LoadedPlugin(LoadedPlugin const&) = delete;
     LoadedPlugin& operator=(LoadedPlugin const&) = delete;
 
-    LoadedPlugin(LoadedPlugin&&) = default;
-    LoadedPlugin& operator=(LoadedPlugin&&) = default;
+    LoadedPlugin(LoadedPlugin&&) noexcept;
+    LoadedPlugin& operator=(LoadedPlugin&&) noexcept;
 
 private:
     using LibHandle = std::unique_ptr<void, decltype(&dlclose)>;
@@ -28,4 +28,4 @@ private:
 
     LoadedPlugin(LibHandle&& handle, PluginApi const* api);
 };
-}
+} // namespace

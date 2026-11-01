@@ -99,4 +99,21 @@ Result<LoadedPlugin> LoadedPlugin::load(std::filesystem::path const& path) {
 
     return LoadedPlugin(std::move(handle), api);
 }
+
+LoadedPlugin::LoadedPlugin(LoadedPlugin&& that) noexcept :
+    m_handle(std::move(that.m_handle)),
+    m_api(that.m_api), 
+    m_name(std::move(that.m_name)) {
+    that.m_api = nullptr;
 }
+
+LoadedPlugin& LoadedPlugin::operator=(LoadedPlugin&& that) noexcept {
+    if (this != &that){
+        m_handle = std::move(that.m_handle);
+        m_api = that.m_api;
+        m_name = std::move(that.m_name);
+        that.m_api = nullptr;
+    }
+    return *this;
+}
+} // namespace
